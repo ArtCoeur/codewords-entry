@@ -1,9 +1,9 @@
-var uniqid = require('uniquid');
+var uniqid = require('uniqid');
 
 /*
  * pushes a new fact onto the queue
  */
-exports.create = function(context, data, type, callback) {
+exports.create = function(context, board_data, mime_type, callback) {
 
     // generate a board id
     var id = uniqid();
@@ -12,8 +12,8 @@ exports.create = function(context, data, type, callback) {
         board: id,
         name: 'new-board',
         data: {
-            board: data,
-            type: type
+            body: board_data,
+            type: mime_type
         }
     };
 
@@ -23,9 +23,5 @@ exports.create = function(context, data, type, callback) {
         var json = JSON.stringify(fact);
         pub.write(json, 'utf8');
         callback(null, 'Posted fact: ' + json);
-
-        pub.connect('facts', function() {
-
-        });
     });
 };
