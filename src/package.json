@@ -1,11 +1,11 @@
 {
-  "name": "Codewords entry point service",
+  "name": "codewords-entry",
   "version": "0.4.0",
   "description": "Entry point for the codewords solver application",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "git@github.com:ArtCoeur/codewords-entry.git"
+    "type": "git",
+    "url": "git@github.com:ArtCoeur/codewords-entry.git"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ../test"
@@ -15,7 +15,8 @@
     "express": "~4.10.4",
     "body-parser": "~1.9.3",
     "underscore": "~1.7.0",
-    "winston": "~0.8.3"
+    "winston": "~0.8.3",
+    "rabbit.js": "~0.4.2"
   },
   "devDependencies": {
     "should": "~4.3.0",
