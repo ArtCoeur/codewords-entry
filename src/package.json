@@ -16,7 +16,8 @@
     "body-parser": "~1.9.3",
     "underscore": "~1.7.0",
     "winston": "~0.8.3",
-    "rabbit.js": "~0.4.2"
+    "rabbit.js": "~0.4.2",
+    "uniqid": "~1.0.0"
   },
   "devDependencies": {
     "should": "~4.3.0",

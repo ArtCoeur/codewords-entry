@@ -1,10 +1,12 @@
+var uniqid = require('uniquid');
+
 /*
  * pushes a new fact onto the queue
  */
 exports.create = function(context, data, type, callback) {
 
     // generate a board id
-    var id ='UNIQUE-ID-GOES-HERE';
+    var id = uniqid();
 
     var fact = {
         board: id,
