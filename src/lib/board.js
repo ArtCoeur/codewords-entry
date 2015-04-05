@@ -11,13 +11,15 @@ exports.create = function(context, board_data, mime_type, callback) {
         board: uniqid(),
         name: 'board.new',
         data: {
-            body: board_data,
+            body: {
+                board: board_data
+            },
             type: mime_type
         }
     };
 
     // pop the board.new fact onto the queue
-    
+
     context.on('ready', function() {
         var pub = context.socket('PUB');
         pub.connect('events', function(){

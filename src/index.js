@@ -5,8 +5,9 @@ var app = require('express')(),
     rabbitmq = require('rabbit.js');
 
 app.use(bodyParser.text({type : 'text/*', limit: '1024kb'}));
-app.use(bodyParser.text({type : 'application/xml', limit: '1024kb'}));
+app.use(bodyParser.text({type : 'application/*', limit: '1024kb'}));
 app.use(bodyParser.json({limit: '1024kb'}));
+app.use(bodyParser.json({type : 'application/*', limit: '1024kb'}));
 
 app.get('/', function (req, res) {
     res.json({
@@ -18,7 +19,7 @@ app.get('/', function (req, res) {
 app.post('/boards', function(req, res) {
     var context = rabbitmq.createContext('amqp://'+process.env.RABBITMQ_PORT_5672_TCP_ADDR+':5672');
 
-    logger.log('info', 'board.new received');
+    logger.log('info', 'board.new received: ' + req.body);
 
     // call the board generator with the rabbit mq context, the board data and type and a callback
     board.create(context, req.body, req.get('Content-Type'), function(err, result) {
