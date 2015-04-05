@@ -10,7 +10,7 @@ exports.create = function(context, board_data, mime_type, callback) {
 
     var fact = {
         board: id,
-        name: 'new-board',
+        name: 'board.new',
         data: {
             body: board_data,
             type: mime_type
@@ -20,8 +20,10 @@ exports.create = function(context, board_data, mime_type, callback) {
     // pop the new-board fact onto the queue
     context.on('ready', function() {
         var pub = context.socket('PUB');
-        var json = JSON.stringify(fact);
-        pub.write(json, 'utf8');
-        callback(null, 'Posted fact: ' + json);
+        pub.connect('events', function(){
+            var json = JSON.stringify(fact);
+            pub.write(json, 'utf8');
+            callback(null, 'Posted fact: ' + json);
+        });
     });
 };

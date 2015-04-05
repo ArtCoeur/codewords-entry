@@ -16,10 +16,9 @@ app.get('/', function (req, res) {
 });
 
 app.post('/boards', function(req, res) {
-
     var context = rabbitmq.createContext('amqp://'+process.env.RABBITMQ_PORT_5672_TCP_ADDR+':5672');
 
-    logger.log('info', 'new-board received');
+    logger.log('info', 'board.new received');
 
     // call the board generator with the rabbit mq context, the board data and type and a callback
     board.create(context, req.body, req.get('Content-Type'), function(err, result) {
