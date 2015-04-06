@@ -11,9 +11,7 @@ exports.create = function(context, board_data, mime_type, callback) {
         board: uniqid(),
         name: 'board.new',
         data: {
-            body: {
-                board: board_data
-            },
+            body: board_data,
             type: mime_type
         }
     };
@@ -25,7 +23,7 @@ exports.create = function(context, board_data, mime_type, callback) {
         pub.connect('events', function(){
             var json = JSON.stringify(fact);
             pub.write(json, 'utf8');
-            callback(null, 'Posted fact: ' + json);
+            callback(null, json);
         });
     });
 };
