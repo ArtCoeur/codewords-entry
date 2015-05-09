@@ -1,5 +1,5 @@
 # codewords-entry
-[![Build status](https://travis-ci.org/ArtCoeur/codewords-entry.svg?branch=master)](https://travis-ci.irg/ArtCoeur/codewords-entry)
+[![Build status](https://travis-ci.org/ArtCoeur/codewords-entry.svg?branch=master)](https://travis-ci.org/ArtCoeur/codewords-entry)
 
 Entry point to the codeword solver app
 
