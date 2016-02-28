@@ -301,7 +301,8 @@
       "dependencies": {
         "async": {
           "version": "0.2.10",
-          "from": "async@0.2.10"
+          "from": "async@0.2.10",
+          "resolved": "https://registry.npmjs.org/async/-/async-0.2.10.tgz"
         },
         "colors": {
           "version": "0.6.2",
@@ -354,8 +355,7 @@
         },
         "node-uuid": {
           "version": "1.4.7",
-          "from": "node-uuid@1.4.7",
-          "resolved": "https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.7.tgz"
+          "from": "node-uuid@1.4.7"
         },
         "readable-stream": {
           "version": "1.1.13",
