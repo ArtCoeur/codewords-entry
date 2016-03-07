@@ -12,15 +12,15 @@
   },
   "author": "Tim Rodger tim.rodger@gmail.com",
   "dependencies": {
-    "express": "~4.10.4",
     "body-parser": "~1.9.3",
-    "underscore": "~1.7.0",
-    "winston": "~0.8.3",
+    "express": "~4.10.4",
     "rabbit.js": "~0.4.2",
-    "uniqid": "~1.0.0"
+    "underscore": "~1.7.0",
+    "uniqid": "~1.0.0",
+    "winston": "~0.8.3"
   },
   "devDependencies": {
-    "should": "~4.3.0",
-    "mocha": "~2.0.1"
+    "mocha": "~2.0.1",
+    "should": "~4.3.0"
   }
 }
