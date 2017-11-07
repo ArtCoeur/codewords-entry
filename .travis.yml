@@ -1,10 +1,12 @@
 language: node_js
+node_js:
+  - "6"
 
 install:
-    - cd src; npm install
+    - yarn install
 
 script:
-    - npm test
+    - yarn test
 
 branches:
     only:
