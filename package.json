@@ -13,16 +13,16 @@
   },
   "author": "Tim Rodger tim.rodger@gmail.com",
   "dependencies": {
-    "body-parser": "~1.9.3",
+    "body-parser": "~1.18.2",
     "eslint": "^4.10.0",
-    "express": "~4.10.4",
+    "express": "~4.16.2",
     "rabbit.js": "~0.4.2",
-    "underscore": "~1.7.0",
-    "uniqid": "~1.0.0",
-    "winston": "~0.8.3"
+    "underscore": "~1.8.3",
+    "uniqid": "~4.1.1",
+    "winston": "~2.4.0"
   },
   "devDependencies": {
-    "mocha": "~2.0.1",
-    "should": "~4.3.0"
+    "mocha": "~4.0.1",
+    "should": "~13.1.3"
   }
 }

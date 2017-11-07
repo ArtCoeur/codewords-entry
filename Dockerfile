@@ -5,7 +5,9 @@ MAINTAINER Tim Rodger
 RUN apt-get update -qq && \
     apt-get -y install \
     nodejs \
-    yarn
+    npm
+
+RUN npm install -g yarn
 
 EXPOSE 80
 
@@ -21,5 +23,8 @@ COPY yarn.lock /home/app/
 
 # Install dependencies
 WORKDIR /home/app
+
+# deal with unbuntu's daft naming of node binary
+RUN sudo ln -s "$(which nodejs)" /usr/bin/node
 
 RUN yarn install
