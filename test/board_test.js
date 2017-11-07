@@ -1,4 +1,4 @@
-var board = require('../src/lib/board'),
+var board = require('../lib/board'),
     assert = require('assert');
 
 describe('board', function() {

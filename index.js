@@ -12,7 +12,7 @@ app.use(bodyParser.json({type : 'application/*', limit: '1024kb'}));
 app.get('/', function (req, res) {
     res.json({
         name : 'codewords/entry',
-        description : "Post board data with the correct content-type to /boards"
+        description : 'Post board data with the correct content-type to /boards'
     });
 });
 
