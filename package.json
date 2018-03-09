@@ -19,7 +19,7 @@
     "rabbit.js": "~0.4.2",
     "underscore": "~1.8.3",
     "uniqid": "~4.1.1",
-    "winston": "~2.4.0"
+    "winston": "~3.0.0-rc2"
   },
   "devDependencies": {
     "mocha": "~4.1.0",
