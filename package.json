@@ -18,7 +18,7 @@
     "express": "~4.16.2",
     "rabbit.js": "~0.4.2",
     "underscore": "~1.9.0",
-    "uniqid": "~5.0.0",
+    "uniqid": "~5.1.0",
     "winston": "~3.0.0-rc2"
   },
   "devDependencies": {
